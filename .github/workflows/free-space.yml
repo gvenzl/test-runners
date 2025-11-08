@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Check Disk Usage
         run: |
-          df -h / 2>/dev/null || true # || true ensures that job continues even if df exits !=0
-          du -sh /* | sort -hr | head -10
+          df -h /
+          du -sh /* 2>/dev/null | sort -hr | head -10
           uname -m  # Bonus: Confirms x64 vs. aarch64
