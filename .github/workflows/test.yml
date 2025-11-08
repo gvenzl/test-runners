@@ -33,7 +33,7 @@ jobs:
         run: sudo du -h --max-depth=5 / | sort -hr | head -n 20
 
       - name: List all files
-        run: sudo ls -alhR / 2>/dev/null
+        run: sudo ls -alhR / 2>/dev/null || true
 
       - name: Remove Haskell (GHC)
         run: sudo rm -rf /usr/local/.ghcup
